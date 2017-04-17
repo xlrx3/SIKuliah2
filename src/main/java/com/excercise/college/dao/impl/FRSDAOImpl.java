@@ -46,7 +46,8 @@ public class FRSDAOImpl implements FRSDAO {
 		String sql= "select f.id, s.nama, sum(sbj.SKS), f.tanggal, f.dosenWali, f.semester, f.status "
 				+ "from Student s, Subject sbj, FRS f, FRSDetail fd "
 				+ "where fd.frs = f.id and fd.mk = sbj.id and f.mhs= s.id "
-				+"group by (f.id, s.nama, f.tanggal, f.dosenWali, f.semester, f.status)" ;
+				+"group by (f.id, s.nama, f.tanggal, f.dosenWali, f.semester, f.status) " 
+				+ "order by f.id DESC";
 		
 		Query query = session.createQuery(sql);
 		List<Object[]>list= query.list();

@@ -4,6 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>MK yang diambil terbanyak</title>
+<link rel="stylesheet"  type="text/css"  href="css/bootstrap-table-1.css">
 </head>
 <body>
  
@@ -11,12 +12,12 @@
  
 <br/>
  
-<table border="1">
+<table border="1" align="center">
  <tr>
    <th>Mata Kuliah</th>
    <th>Diambil</th>
  </tr>
- <c:forEach items="${repCount}" var="info">
+ <c:forEach items="${repCount}" var="info" >
  
  <tr>
    <td> ${info[0].getNama_MK()}  </td>

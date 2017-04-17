@@ -4,6 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Mahasiswa dengan MK terbanyak</title>
+<link rel="stylesheet"  type="text/css"  href="css/bootstrap-table-1.css">
 </head>
 <body>
  
@@ -11,7 +12,7 @@
  
 <br/>
  
-<table border="1">
+<table border="1" align="center">
  <tr>
    <th>Mahasiswa</th>
    <th>Jumlah MK</th>

@@ -4,7 +4,9 @@
 <link rel="stylesheet"  type="text/css"  href="css/bootstrap-table-1.css">
 </head>
 <body>
-	<table>
+	<h1 align="center">SI Kuliah Universitas X</h1>
+<!-- 	<h2 align="center">(Alamat univ x)</h2> -->
+	<table align="center">
 		<tr>
 			<td><h3><a href="students">Mahasiswa</a></td></h3>
 		</tr>

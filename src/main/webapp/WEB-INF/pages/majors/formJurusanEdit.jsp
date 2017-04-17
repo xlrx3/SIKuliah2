@@ -18,6 +18,12 @@
        <form:hidden path="idJurusan" />
  
        <table>
+                     <tr>
+               <td>Kode Jurusan (2 angka)</td>
+               <td><form:input path="code" maxlength="2"  size="2" /></td>
+               <td><form:errors path="code"
+                       class="error-message" /></td>      
+           </tr>
            <tr>
                <td>Nama</td>
                <td><form:input path="namaJurusan" /></td>

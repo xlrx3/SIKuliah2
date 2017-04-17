@@ -14,7 +14,6 @@
  
 <table border="1">
  <tr>
-   <th>ID</th>
    <th>Mahasiswa</th>
    <th>Total SKS</th>
    <th>Tanggal FRS</th>
@@ -27,7 +26,6 @@
  <c:forEach items="${frsInfo}" var="info">
  
  <tr>
-   <td> ${info[0]}  </td>
    <td> ${info[1]}  </td>
    <td> ${info[2]}  </td>
    <td> ${info[3]}  </td>
