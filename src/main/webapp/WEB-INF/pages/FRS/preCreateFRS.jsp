@@ -4,7 +4,7 @@
 
 <html>
 	<head>
-		<title>Choose Semester</title>
+		<title>Choose Current Semester</title>
 		<link rel="stylesheet"  type="text/css"  href="${pageContext.request.contextPath}/css/form-basic.css">
 	</head>
 	
