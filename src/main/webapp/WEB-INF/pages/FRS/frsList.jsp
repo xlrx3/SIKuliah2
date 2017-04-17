@@ -18,8 +18,8 @@
    <th>Total SKS</th>
    <th>Tanggal FRS</th>
    <th>Dosen Wali</th>
+   <th>Semester</th>
    <th>Status</th>
-    <th>Semester</th>
    <th>Delete</th>
    <th>Edit</th>
  </tr>
