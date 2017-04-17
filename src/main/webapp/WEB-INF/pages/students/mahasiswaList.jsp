@@ -19,6 +19,7 @@
    <th>Angkatan</th>
    <th>Status</th>
    <th>Jurusan</th>
+   <th colspan="3">Actions</th>
 
  </tr>
  <c:forEach items="${mahasiswaInfo}" var="info">

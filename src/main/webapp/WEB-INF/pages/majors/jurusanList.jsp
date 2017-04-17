@@ -21,8 +21,7 @@
    <th>NamaJurusan</th>
    <th>FakultasJurusan</th>
    <th>KepalaJurusan</th>
-   <th>Delete</th>
-   <th>Edit</th>
+   <th colspan="2">Actions</th>>
  </tr>
  <c:forEach items="${jurusanInfo}" var="info">
  

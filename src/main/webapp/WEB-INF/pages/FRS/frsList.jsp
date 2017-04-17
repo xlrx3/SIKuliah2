@@ -20,8 +20,7 @@
    <th>Dosen Wali</th>
    <th>Semester</th>
    <th>Status</th>
-   <th>Delete</th>
-   <th>Edit</th>
+   <th colspan="3">Actions</th>
  </tr>
  <c:forEach items="${frsInfo}" var="info">
  

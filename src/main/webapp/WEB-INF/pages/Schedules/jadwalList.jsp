@@ -20,8 +20,7 @@
    <th>Hari</th>
    <th>Mulai</th>
    <th>Selesai</th>
-      <th>Delete</th>
-   <th>Edit</th>
+   <th colspan="2">Actions</th>
 
  </tr>
  <c:forEach items="${jadwalInfo}" var="info">

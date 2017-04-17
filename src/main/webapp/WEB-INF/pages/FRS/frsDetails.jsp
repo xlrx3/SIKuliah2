@@ -11,7 +11,11 @@
 	<a href="${pageContext.request.contextPath}/FRSs">FRS</a>
 
 	<br />
-
+	
+	<h3>Nama : ${mahasiswa} </h3>
+	<h3>Dosen Wali : ${dosen} </h3>
+	<h3>Semester : ${semester} </h3>
+	
 	<table border="1">
 		<tr>
 			<th>MataKuliah</th>

@@ -210,7 +210,7 @@ private String formPRS(Model model, FRSForm frsInfo, Student mhs) {
 		return this.formPRS(model, frsf, mahasiswa);
 	}
 //
-	@RequestMapping(value="/deleteFRS/{id}")
+	@RequestMapping(value="/deleteFRS/{id}",  method=RequestMethod.GET)
 	public String deleteFRS(Model model, @PathVariable("id") Integer id) {
 		frsDAO.deleteFRS(id);
 		return "redirect:/FRSs";
@@ -232,6 +232,10 @@ private String formPRS(Model model, FRSForm frsInfo, Student mhs) {
 	@RequestMapping(value="/viewDetail/{id}", method=RequestMethod.GET)
 	public String viewFRSDetail(Model model,@PathVariable("id")Integer frs_id) {
 		List<FRSDetail> frsDetail=this.frsDetailDAO.getAllDetailFromFRSId(frs_id);
+		FRS frs= frsDAO.getFRSbyId(frs_id);
+		model.addAttribute("mahasiswa",frs.getMhs().getNama());
+		model.addAttribute("semester",frs.getSemester());
+		model.addAttribute("dosen", frs.getDosenWali());
 		model.addAttribute("frsDetailInfo",frsDetail);
 		return "FRS/frsDetails";
 	}
