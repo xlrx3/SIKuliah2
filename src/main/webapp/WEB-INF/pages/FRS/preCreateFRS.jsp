@@ -9,6 +9,7 @@
 	</head>
 	
 	<body>
+	<h3>Silahkan pilih periode FRS saat ini</h3>
 		<form:form action="${pageContext.request.contextPath}/FRS/${FRSid }" method="GET" modelAttribute="frsf">
 			<table>
 				<tr>
