@@ -7,6 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Form Jadwal</title>
+<link rel="stylesheet"  type="text/css"  href="${pageContext.request.contextPath}/css/clockpicker.css">
+<link rel="stylesheet"  type="text/css"  href="${pageContext.request.contextPath}/css/standalone.css">
 </head>
 <body>
  
