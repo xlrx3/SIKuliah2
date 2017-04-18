@@ -1,0 +1,15 @@
+# PostgreSQL JDBC connect
+
+jdbc.driverClassName = org.postgresql.Driver
+jdbc.url = jdbc:postgresql://localhost:5432/<DBName>
+jdbc.username=<username>
+jdbc.password=<password>
+
+# Hibernate Config
+
+hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+hibernate.show_sql=true
+current_session_context_class=thread
+
+#change this to validate if database is already exist (not first time run)
+hibernate.hbm2ddl.auto=create
