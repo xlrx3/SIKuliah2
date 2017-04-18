@@ -10,7 +10,8 @@
  
 <a href="${pageContext.request.contextPath}/subject">Create Mata Kuliah</a>
  
-<br/>
+<br />
+<a href="main">Back</a>
  
 <table border="1">
  <tr>

@@ -7,6 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Form Jadwal</title>
+<link rel="stylesheet"  type="text/css"  href="${pageContext.request.contextPath}/css/form_1.css">
 <link rel="stylesheet"  type="text/css"  href="${pageContext.request.contextPath}/css/clockpicker.css">
 <link rel="stylesheet"  type="text/css"  href="${pageContext.request.contextPath}/css/standalone.css">
 </head>
@@ -14,7 +15,8 @@
  
    <h3>${formTitle}</h3>
  
-   <form:form action="schedule" method="POST"
+ <div class="form-style-10">
+   <form:form action="${pageContext.request.contextPath}/schedule" method="POST"
        modelAttribute="jadwalForm">
       
        <form:hidden path="id" />
@@ -77,6 +79,6 @@
        </table>
        
    </form:form>
- 
+ </div>
 </body>
 </html>

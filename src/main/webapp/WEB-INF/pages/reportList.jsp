@@ -17,7 +17,7 @@
 			<td><h3><a href="mhsCount">Mahasiswa yang ambil MK terbanyak</a></td></h3>
 		</tr>
 				<tr>
-			<td><a href="main">Back</a></td>
+			<td><h3><a href="main">Back</a></h3></td>
 		</tr>
 	</table>
 </body>

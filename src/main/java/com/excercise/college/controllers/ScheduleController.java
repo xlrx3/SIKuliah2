@@ -96,7 +96,7 @@ public class ScheduleController {
 		return this.formJadwal(model, jadwal);
 	}
 
-	@RequestMapping(value = "/schedule/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/schedule/{id}", method = RequestMethod.GET)
 	public String deleteJadwal(Model model, @PathVariable("id") Integer id) {
 		scheduleDAO.deleteSchedule(id);
 		return "redirect:/schedules";

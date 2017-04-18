@@ -9,12 +9,13 @@
 <body>
  
 <a href="${pageContext.request.contextPath}/schedule">NEW</a>
+<br />
+<a href="main">Back</a>
  
 <br/>
  
 <table border="1">
  <tr>
-   <th>Id</th>
    <th>Mata Kuliah</th>
    <th>Ruangan</th>
    <th>Hari</th>
@@ -26,13 +27,12 @@
  <c:forEach items="${jadwalInfo}" var="info">
  
  <tr>
-   <td> ${info.id}  </td>
    <td> ${info.mk.nama_MK}  </td>
    <td> ${info.ruangan}  </td>
    <td> ${info.hari}  </td>
    <td> ${info.jam_mulai}  </td>
     <td> ${info.jam_selesai}  </td>
-   <td> <a href="deleteJadwal?id=${info.id}">Delete</a> </td>
+   <td> <a href="schedule/${info.id }">Delete</a> </td>
    <td> <a href="schedule/${info.id}/edit">Edit</a> </td>
  </tr>    
  

@@ -12,7 +12,8 @@
  
 <a href="${pageContext.request.contextPath}/major">NEW</a>
  
-<br/>
+<br />
+<a href="main">Back</a>
  
 <table border="1">
  <tr>

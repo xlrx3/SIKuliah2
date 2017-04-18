@@ -53,7 +53,7 @@ public class Schedule {
 		this.id = idJ;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "matakuliah", nullable = false, //
 			foreignKey = @ForeignKey(name = "Jadwal_ibfk_1"))
 	public Subject getMk() {

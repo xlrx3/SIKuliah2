@@ -26,7 +26,7 @@ public class ReportDAOImpl implements ReportDAO {
 		Criteria criteria = session.createCriteria(SubjectMajor.class, "mkj");
 		criteria.setProjection(Projections.projectionList().add(Projections.groupProperty("jurusan"))
 				.add(Projections.count("mk"), "mkCount")).addOrder(Order.desc("mkCount"));
-		criteria.setMaxResults(2);
+		criteria.setMaxResults(1);
 
 		return criteria.list();
 	}

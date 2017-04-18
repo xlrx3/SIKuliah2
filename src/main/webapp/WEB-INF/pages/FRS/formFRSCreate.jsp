@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>FRS</title>
-<link rel="stylesheet"  type="text/css"  href="${pageContext.request.contextPath}/css/form-basic.css">
+<link rel="stylesheet"  type="text/css"  href="${pageContext.request.contextPath}/css/form_1.css">
 </head>
 <body>
 <script>
@@ -24,6 +24,7 @@ var checkForm = function(form){
 </script>
    <h3>${formTitle}</h3>
  
+  <div class="form-style-10">
    <form:form onsubmit="return checkForm(this);" action="/SIKuliah2/FRS" method="POST"
        modelAttribute="frsFormCreate">
      
@@ -99,6 +100,6 @@ var checkForm = function(form){
            </tr>
 					</table>
    </form:form>
- 
+ </div>
 </body>
 </html>

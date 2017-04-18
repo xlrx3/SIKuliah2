@@ -10,7 +10,8 @@
  
 <a href="${pageContext.request.contextPath}/subjectMajor">Create MK-Jur</a>
  
-<br/>
+<br />
+<a href="main">Back</a>
  
 <table border="1">
  <tr>
