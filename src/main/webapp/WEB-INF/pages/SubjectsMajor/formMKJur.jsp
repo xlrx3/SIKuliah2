@@ -7,10 +7,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>MK Jurusan</title>
+<link rel="stylesheet"  type="text/css"  href="${pageContext.request.contextPath}/css/form_1.css">
 </head>
 <body>
  
    <h3>${formTitle}</h3>
+    <div class="form-style-10">
  
    <form:form action="subjectMajor" method="POST"
        modelAttribute="mKJurForm">
@@ -68,6 +70,6 @@
        </table>
        
    </form:form>
- 
+ </div>
 </body>
 </html>

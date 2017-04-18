@@ -18,11 +18,11 @@
 <table border="1">
  <tr>
  	<th>Id</th>
- 	   <th>KodeJurusan</th>
+ 	<th>KodeJurusan</th>
    <th>NamaJurusan</th>
    <th>FakultasJurusan</th>
    <th>KepalaJurusan</th>
-   <th colspan="2">Actions</th>>
+   <th colspan="2">Actions</th>
  </tr>
  <c:forEach items="${jurusanInfo}" var="info">
  

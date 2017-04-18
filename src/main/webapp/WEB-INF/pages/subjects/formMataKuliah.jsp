@@ -7,11 +7,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Create Mata Kuliah</title>
+<link rel="stylesheet"  type="text/css"  href="${pageContext.request.contextPath}/css/form_1.css">
 </head>
 <body>
  
    <h3>${formTitle}</h3>
- 
+  <div class="form-style-10">
    <form:form action="subject" method="POST"
        modelAttribute="mataKuliahForm">
       
@@ -53,6 +54,6 @@
        </table>
        
    </form:form>
- 
+ </div>
 </body>
 </html>
