@@ -64,7 +64,7 @@ public class Schedule {
 		this.mk = mk;
 	}
 
-	@Column(name = "ruangan", length = 50, nullable = false)
+	@Column(name = "ruangan", length = 15, nullable = false)
 	public String getRuangan() {
 		return ruangan;
 	}
@@ -74,7 +74,7 @@ public class Schedule {
 	}
 
 	@Enumerated(EnumType.STRING)
-	@Column(name = "hari", length = 50, nullable = false)
+	@Column(name = "hari", nullable = false)
 	public Days getHari() {
 		return hari;
 	}
@@ -83,7 +83,7 @@ public class Schedule {
 		this.hari = hari;
 	}
 
-	@Column(name = "start", length = 50, nullable = false)
+	@Column(name = "start", length = 10, nullable = false)
 	public String getJam_mulai() {
 		return jam_mulai;
 	}
@@ -92,7 +92,7 @@ public class Schedule {
 		this.jam_mulai = jam_mulai;
 	}
 
-	@Column(name = "finish", length = 50, nullable = false)
+	@Column(name = "finish", length = 10, nullable = false)
 	public String getJam_selesai() {
 		return jam_selesai;
 	}

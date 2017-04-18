@@ -65,7 +65,7 @@ public class Student implements Serializable {
 		NPM = nPM;
 	}
 
-	@Column(name = "name", length = 50, nullable = false)
+	@Column(name = "name", length = 100, nullable = false)
 	public String getNama() {
 		return nama;
 	}

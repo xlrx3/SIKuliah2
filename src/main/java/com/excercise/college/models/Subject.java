@@ -48,7 +48,7 @@ public class Subject {
 		this.id = id_MK;
 	}
 
-	@Column(name = "name", length = 50, nullable = false)
+	@Column(name = "name", length = 100, nullable = false)
 	public String getNama_MK() {
 		return name;
 	}
