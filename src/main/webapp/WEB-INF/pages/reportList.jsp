@@ -8,13 +8,13 @@
 	
 	<table>
 		<tr>
-			<td><h3><a href="Report/1">Jurusan dengan MK terbanyak</a></td></h3>
+			<td><h3><a href="reportCount">Jurusan dengan MK terbanyak</a></td></h3>
 		</tr>
 		<tr>
-			<td><h3><a href="Report/3">MK yang diambil terbanyak</a></td></h3>
+			<td><h3><a href="mkCount">MK yang diambil terbanyak</a></td></h3>
 		</tr>
 		<tr>
-			<td><h3><a href="Report/2">Mahasiswa yang ambil MK terbanyak</a></td></h3>
+			<td><h3><a href="mhsCount">Mahasiswa yang ambil MK terbanyak</a></td></h3>
 		</tr>
 				<tr>
 			<td><h3><a href="main">Back</a></h3></td>

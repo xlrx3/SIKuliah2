@@ -72,7 +72,7 @@ public class FRS {
 		this.tanggal = tanggal;
 	}
 
-	@Column(name = "dosenWali", length = 100, nullable = false)
+	@Column(name = "dosenWali", length = 50, nullable = false)
 	public String getDosenWali() {
 		return dosenWali;
 	}

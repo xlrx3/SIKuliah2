@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Jumlah MK Tiap Jurusan</title>
-<link rel="stylesheet"  type="text/css"  href="${pageContext.request.contextPath}/css/bootstrap-table-1.css">
+<link rel="stylesheet"  type="text/css"  href="css/bootstrap-table-1.css">
 </head>
 <body>
  
@@ -31,6 +31,6 @@
    <div class="message">${message}</div>
 </c:if>
  
- <a href="${pageContext.request.contextPath}/reportList">Back</a>
+ <a href="reportList">Back</a>
 </body>
 </html>

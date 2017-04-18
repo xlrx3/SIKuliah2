@@ -31,7 +31,7 @@ public class ReportController {
 	@Autowired
 	private ReportDAO reportDAO;
 
-	@RequestMapping(value = "/Report/1", method = RequestMethod.GET)
+	@RequestMapping(value = "/reportCount", method = RequestMethod.GET)
 	public String countMKJurusan(Model model) {
 	
 		List<Object[]> mkjList = reportDAO.getMajorsWithMostSubject();
@@ -46,7 +46,7 @@ public class ReportController {
 		return "Reports/reportCount";
 	}
 
-	@RequestMapping(value = "/Report/2", method = RequestMethod.GET)
+	@RequestMapping(value = "/mhsCount", method = RequestMethod.GET)
 	public String countMahasiswaMK(Model model) {
 
 		List<Object[]> mhsList = reportDAO.getStudentsWithMostSubjects();
@@ -61,7 +61,7 @@ public class ReportController {
 		return "Reports/mhsCount";
 	}
 
-	@RequestMapping(value = "/Report/3", method = RequestMethod.GET)
+	@RequestMapping(value = "/mkCount", method = RequestMethod.GET)
 	public String countMKMahasiswa(Model model) {
 		List<Object[]> mkList = reportDAO.getSubjectsWithMostStudents();
 

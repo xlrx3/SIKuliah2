@@ -56,7 +56,7 @@ public class Major {
 		this.id = idJurusan;
 	}
 
-	@Column(name = "name", length = 100, nullable = false)
+	@Column(name = "name", length = 50, nullable = false)
 	public String getNamaJurusan() {
 		return name;
 	}
@@ -65,7 +65,7 @@ public class Major {
 		this.name = namaJurusan;
 	}
 
-	@Column(name = "faculty", length = 100, nullable = false)
+	@Column(name = "faculty", length = 50, nullable = false)
 	public String getFakultasJurusan() {
 		return faculty;
 	}
@@ -74,7 +74,7 @@ public class Major {
 		this.faculty = fakultasJurusan;
 	}
 
-	@Column(name = "head", length = 100, nullable = false)
+	@Column(name = "head", length = 50, nullable = false)
 	public String getKepalaJurusan() {
 		return head;
 	}
