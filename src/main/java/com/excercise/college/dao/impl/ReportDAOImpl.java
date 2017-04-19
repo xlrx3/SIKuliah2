@@ -7,11 +7,13 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.excercise.college.dao.ReportDAO;
 import com.excercise.college.models.FRS;
 import com.excercise.college.models.FRSDetail;
+import com.excercise.college.models.Student;
 import com.excercise.college.models.SubjectMajor;
 
 public class ReportDAOImpl implements ReportDAO {
@@ -58,6 +60,22 @@ public class ReportDAOImpl implements ReportDAO {
 		criteria.setMaxResults(3);
 		
 		return criteria.list();
+	}
+
+
+	@Override
+	public List<FRSDetail> getSubjectsTakenByStudent(Integer id) {
+		Session session= sessionFactory.getCurrentSession();
+		Criteria crit= session.createCriteria(Student.class);
+		crit.add(Restrictions.eq("id", id));
+		Student mhs= (Student) crit.uniqueResult();
+//		String name= mhs.getNama();
+		
+		Criteria crit2= session.createCriteria(FRSDetail.class,"frsd");
+		crit2.createAlias("frsd.frs", "FRS");
+		crit2.add(Restrictions.eq("FRS.mhs", mhs));
+		List<FRSDetail> frsdList=crit2.list();
+		return frsdList;
 	}
 
 }

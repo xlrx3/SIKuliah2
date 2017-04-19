@@ -8,10 +8,10 @@
 </head>
 <body>
  
-<a href="${pageContext.request.contextPath}/students">FRS</a>
+<a href="${pageContext.request.contextPath}/students">Back to students</a>
  
 <br />
-<a href="main">Back</a>
+<a href="main">Main Menu</a>
  
 <table border="1">
  <tr>
@@ -43,6 +43,6 @@
   
    <div class="message">${message}</div>
 </c:if>
- <a href="main">Back</a>
+ <a href="main">Main Menu</a>
 </body>
 </html>

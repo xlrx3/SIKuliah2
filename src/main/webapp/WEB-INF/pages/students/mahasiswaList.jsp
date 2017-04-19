@@ -20,7 +20,7 @@
    <th>Angkatan</th>
    <th>Status</th>
    <th>Jurusan</th>
-   <th colspan="3">Actions</th>
+   <th colspan="4">Actions</th>
 
  </tr>
  <c:forEach items="${mahasiswaInfo}" var="info">
@@ -34,6 +34,7 @@
    <td> <a href="student/${info.id}">Delete</a> </td>
    <td> <a href="student/${info.id}/edit">Edit</a> </td>
    <td> <a href="preCreateFRS/${info.id }">FRS</a> </td>
+   <td> <a href="report/4/${info.id }">MK yang sudah diambil</a>
  </tr>    
  
  </c:forEach>

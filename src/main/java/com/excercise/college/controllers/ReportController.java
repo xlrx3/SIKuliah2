@@ -12,12 +12,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.excercise.college.dao.ReportDAO;
+import com.excercise.college.dao.StudentDAO;
 import com.excercise.college.models.FRS;
+import com.excercise.college.models.FRSDetail;
+import com.excercise.college.models.Student;
 import com.excercise.college.models.SubjectMajor;
 
 @Controller
@@ -30,6 +34,9 @@ public class ReportController {
 	
 	@Autowired
 	private ReportDAO reportDAO;
+	
+	@Autowired
+	private StudentDAO studentDAO;
 
 	@RequestMapping(value = "/report/1", method = RequestMethod.GET)
 	public String countMKJurusan(Model model) {
@@ -74,4 +81,18 @@ public class ReportController {
 
 		return "Reports/mkCount";
 	}
+	
+	@RequestMapping(value= "report/4/{id}", method= RequestMethod.GET)
+	public String getSubjectsTakenByStudent(Model model, @PathVariable("id")Integer id){
+		List<FRSDetail> subjectTaken= reportDAO.getSubjectsTakenByStudent(id);
+		Student std=studentDAO.findStudentById(id);
+		
+		for(FRSDetail frsd : subjectTaken) {
+			System.out.println("mk: "+ frsd.getMk().getNama_MK());
+		}
+		model.addAttribute("taken", subjectTaken);
+		model.addAttribute("student", std);
+		return "Reports/takenSubjects";
+	}
+	
 }
