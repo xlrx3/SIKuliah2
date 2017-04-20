@@ -14,8 +14,10 @@
  
 <br />
 <a href="main">Back</a>
- 
-<table border="1">
+<br />
+<br /> 
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Nama/kode Jurusan or Fakultas">
+<table border="1" id="myTable">
  <tr>
  	<th>Id</th>
  	<th>KodeJurusan</th>
@@ -44,5 +46,30 @@
    <div class="message">${message}</div>
 </c:if>
  <a href="main">Back</a>
+ 
+ <script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    td2 = tr[i].getElementsByTagName("td")[2];
+    td3 = tr[i].getElementsByTagName("td")[3];
+    if (td || td2 || td3) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1 || td2.innerHTML.toUpperCase().indexOf(filter) > -1 || td3.innerHTML.toUpperCase().indexOf(filter) > -1 ) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>
