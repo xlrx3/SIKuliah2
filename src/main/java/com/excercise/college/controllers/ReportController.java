@@ -101,4 +101,18 @@ public class ReportController {
 		return "Reports/studentMajorList";
 	}
 	
+	@RequestMapping(value = "report/mostStudent", method = RequestMethod.GET)
+	public String countMostStudentMajors(Model model) {
+		List<Object[]> mkList = reportDAO.getMajorsWithMostStudent();
+
+		for (Object[] mk : mkList) {
+			Hibernate.initialize(mk[0]);
+			// System.out.println("ddadada =" +mkj[0]);
+		}
+
+		model.addAttribute("repCount", mkList);
+
+		return "Reports/mostStudent";
+	}
+	
 }

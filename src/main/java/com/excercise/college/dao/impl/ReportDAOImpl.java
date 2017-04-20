@@ -78,4 +78,14 @@ public class ReportDAOImpl implements ReportDAO {
 		return frsdList;
 	}
 
+
+	@Override
+	public List<Object[]> getMajorsWithMostStudent() {
+		Session session= sessionFactory.getCurrentSession();
+		Criteria crit= session.createCriteria(Student.class);
+		crit.setProjection(Projections.projectionList().add(Projections.groupProperty("jurusan"))
+				.add(Projections.count("id"), "mhsCount")).addOrder(Order.desc("mhsCount"));
+		return crit.list();
+	}
+
 }

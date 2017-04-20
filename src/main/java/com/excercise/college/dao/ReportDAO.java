@@ -10,5 +10,5 @@ public interface ReportDAO {
 	public List<Object[]> getStudentsWithMostSubjects();
 	public List<Object[]> getSubjectsWithMostStudents();
 	public List<FRSDetail> getSubjectsTakenByStudent(Integer id);
-	
+	public List<Object[]> getMajorsWithMostStudent();
 }

@@ -16,9 +16,13 @@
 		<tr>
 			<td><h3><a href="report/2">Mahasiswa yang ambil MK terbanyak</a></td></h3>
 		</tr>
-				<tr>
+		<tr>
+			<td><h3><a href="report/mostStudent">Jumlah Mahasiswa per Jurusan</a></h3></td>
+		</tr>
+		<tr>
 			<td><h3><a href="main">Back</a></h3></td>
 		</tr>
+
 	</table>
 </body>
 </html>
