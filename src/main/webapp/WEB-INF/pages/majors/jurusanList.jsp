@@ -22,7 +22,7 @@
    <th>NamaJurusan</th>
    <th>FakultasJurusan</th>
    <th>KepalaJurusan</th>
-   <th colspan="2">Actions</th>
+   <th colspan="3">Actions</th>
  </tr>
  <c:forEach items="${jurusanInfo}" var="info">
  
@@ -34,6 +34,7 @@
    <td> ${info.kepalaJurusan}  </td>
    <td> <form action="major/${info.idJurusan}" method="GET" > <input type="submit" value="delete"> </form> </td>
    <td> <a href="major/${info.idJurusan}/edit">Edit</a> </td>
+   <td><a href="report/studentInMajor/${info.idJurusan}">Get List Student</a>
  </tr>    
  
  </c:forEach>

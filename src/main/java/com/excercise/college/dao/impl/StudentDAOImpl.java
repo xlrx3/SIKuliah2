@@ -129,4 +129,14 @@ public class StudentDAOImpl implements StudentDAO {
 		return res+1;
 	}
 
+	@Override
+	public List<Student> getStudentThatMajors(Integer majorId) {
+		Major jur=majorDAO.getMajorById(majorId);
+		Session session= sessionFactory.getCurrentSession();
+		Criteria crit= session.createCriteria(Student.class);
+		crit.createAlias("jurusan", "major");
+		crit.add(Restrictions.eq("major.id", jur.getIdJurusan()));
+		return crit.list();
+	}
+
 }

@@ -95,4 +95,10 @@ public class ReportController {
 		return "Reports/takenSubjects";
 	}
 	
+	@RequestMapping(value="report/studentInMajor/{id}", method= RequestMethod.GET)
+	public String getStudentsByMajorId(Model model, @PathVariable("id")Integer majorId) {
+		model.addAttribute("listStudent",studentDAO.getStudentThatMajors(majorId));
+		return "Reports/studentMajorList";
+	}
+	
 }

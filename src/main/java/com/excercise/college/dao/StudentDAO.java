@@ -18,5 +18,7 @@ public interface StudentDAO {
 	public void deleteStudent(Integer id);
 	
 	public Integer countStudentByMajorByYear (Major jur, Integer Angkatan);
+	
+	public List<Student> getStudentThatMajors(Integer majorId);
 
 }

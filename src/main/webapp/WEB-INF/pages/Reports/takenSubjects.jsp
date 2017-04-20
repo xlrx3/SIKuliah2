@@ -34,6 +34,9 @@
   
    <div class="message">${message}</div>
 </c:if>
-  <a href="${pageContext.request.contextPath}/students">Back</a>
+  <a href="${pageContext.request.contextPath}/students">Students</a> 
+  <br />
+  
+  <a href="${pageContext.request.contextPath}/majors">Majors</a>
 </body>
 </html>
