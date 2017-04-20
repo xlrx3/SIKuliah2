@@ -115,4 +115,18 @@ public class ReportController {
 		return "Reports/mostStudent";
 	}
 	
+	@RequestMapping(value = "/report/creditsPerMajor", method = RequestMethod.GET)
+	public String countCreditsMajor(Model model) {
+	
+		List<Object[]> mkjList = reportDAO.getTotalCreditsPerMajor();
+
+		for (Object[] mkj : mkjList) {
+			Hibernate.initialize(mkj[0]);
+			// System.out.println("ddadada =" +mkj[0]);
+		}
+
+		model.addAttribute("repCount", mkjList);
+
+		return "Reports/creditMajor";
+	}
 }

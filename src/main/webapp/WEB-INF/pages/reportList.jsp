@@ -20,6 +20,9 @@
 			<td><h3><a href="report/mostStudent">Jumlah Mahasiswa per Jurusan</a></h3></td>
 		</tr>
 		<tr>
+			<td><h3><a href="report/creditsPerMajor">Total SKS Jurusan </a></h3></td>
+		</tr>
+		<tr>
 			<td><h3><a href="main">Back</a></h3></td>
 		</tr>
 

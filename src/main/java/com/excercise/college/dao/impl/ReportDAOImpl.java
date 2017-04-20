@@ -88,4 +88,16 @@ public class ReportDAOImpl implements ReportDAO {
 		return crit.list();
 	}
 
+
+	@Override
+	public List<Object[]> getTotalCreditsPerMajor() {
+		Session session = sessionFactory.getCurrentSession();
+		Criteria criteria = session.createCriteria(SubjectMajor.class, "mkj");
+		criteria.createAlias("mk", "matkul");
+		criteria.setProjection(Projections.projectionList().add(Projections.groupProperty("jurusan"))
+				.add(Projections.sum("matkul.SKS"), "mkCount")).addOrder(Order.desc("mkCount"));
+
+		return criteria.list();
+	}
+
 }
