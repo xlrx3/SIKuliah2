@@ -16,6 +16,7 @@ import com.excercise.college.dao.FRSDAO;
 import com.excercise.college.dao.FRSDetailDAO;
 import com.excercise.college.dao.StudentDAO;
 import com.excercise.college.dao.SubjectDAO;
+import com.excercise.college.enums.Semester;
 import com.excercise.college.forms.FRSForm;
 import com.excercise.college.models.FRS;
 import com.excercise.college.models.Student;
@@ -112,7 +113,8 @@ public class FRSDAOImpl implements FRSDAO {
 		frs.setMhs(mhs);
 		frs.setStatus(true);
 		frs.setTanggal(sqlDate);
-		frs.setSemester(frsf.getSemesters());
+		frs.setNumSemester(frsf.getSemesters());
+		frs.setSemester(frsf.getSemester());
 		session.persist(frs);
 		this.frsDetailDAO.saveFRSDetailForFRSId(frs.getId(), chooseMK);
 	}
@@ -141,7 +143,8 @@ public class FRSDAOImpl implements FRSDAO {
 		frs.setMhs(mhs);
 		frs.setStatus(true);
 //		frs.setTanggal(sqlDate);
-		frs.setSemester(frsf.getSemesters());
+		frs.setNumSemester(frsf.getSemesters());
+		frs.setSemester(frsf.getSemester());
 		session.persist(frs);
 		this.frsDetailDAO.deleteSubjectFromFRSDetail(frs.getId());
 		this.frsDetailDAO.saveFRSDetailForFRSId(frs.getId(), chooseMK);
@@ -156,5 +159,6 @@ public class FRSDAOImpl implements FRSDAO {
 //		crit.add(Restrictions.eq("frs.mhs.nama",Name));
 //		return crit.list();
 //	}
+
 
 }

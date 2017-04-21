@@ -9,19 +9,16 @@
 	</head>
 	
 	<body>
-	<h3>Silahkan pilih periode FRS saat ini</h3>
-		<form:form action="${pageContext.request.contextPath}/FRS/${FRSid }" method="GET" modelAttribute="frsf">
+	
+	<h3>Silahkan Masukan Semester</h3>
+		<form:form onsubmit="return checkForm(this);" action="${pageContext.request.contextPath}/FRS/${FRSid }" method="GET" modelAttribute="frsf">
 			<table>
-				<tr>
-				<td></td>
-					<td>
-						<form:select path="semesters" >
-							<c:forEach items="${smtList}"  var="semester">
-    							<option value="${semester}">${semester}</option>
-							</c:forEach>
-			      		</form:select>
-			      	</td>
-				</tr>
+            <tr>
+               <td>Semester</td>
+               <td><form:input path="semesters" maxlength="2"  size="2" /></td>
+               <td><form:errors path="semesters"
+                       class="error-message" /></td>      
+           </tr>
 				<tr>
 					<td>&nbsp;</td>
                		<td><input type="submit" value="Submit" />
@@ -32,5 +29,18 @@
 			</table>
 		</form:form>
 	</body>
+	
+<script>
+// var checkForm = function(form){
+//     var inputs = form.getElementsByTagName('input');
+//     for(var i = 0, l = inputs.length; i < l; i++){
+//         var input = inputs[i];
+//         if(input.type == "checkbox" && input.checked)
+//             return true;
+//     }
+//     alert('Please checked at least 1 subject(s)');
+//     return false;
+// };
+</script>
 
 </html>

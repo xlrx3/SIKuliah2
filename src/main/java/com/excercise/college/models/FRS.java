@@ -29,6 +29,16 @@ public class FRS {
 	private String dosenWali;
 	private boolean status;
 	private Semester semester;
+	private Integer numSemester;
+
+	@Column(name = "numSemester", nullable = false)
+	public Integer getNumSemester() {
+		return numSemester;
+	}
+
+	public void setNumSemester(Integer numSemester) {
+		this.numSemester = numSemester;
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

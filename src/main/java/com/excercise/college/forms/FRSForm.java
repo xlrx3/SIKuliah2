@@ -11,7 +11,16 @@ public class FRSForm {
 //	private Integer id_MK;
 	private String nama_mhs;
 	private String nama_jur;
-	private Semester semesters;
+	private Integer semesters;
+	private Semester semester;
+
+	public Semester getSemester() {
+		return semester;
+	}
+
+	public void setSemester(Semester semester) {
+		this.semester = semester;
+	}
 
 	public FRSForm() {
 
@@ -74,13 +83,21 @@ public class FRSForm {
 		this.nama_jur = nama_jur;
 	}
 
-	public Semester getSemesters() {
+	public Integer getSemesters() {
 		return semesters;
 	}
 
-	public void setSemesters(Semester semesters) {
+	public void setSemesters(Integer semesters) {
 		this.semesters = semesters;
 	}
 
+	public Semester getSemesterFromSemesterNum(Integer smtNum) {
+		if(smtNum%2==1) {
+			return Semester.GANJIL;
+		}
+		else {
+			return Semester.GENAP;
+		}
+	}
 	
 }

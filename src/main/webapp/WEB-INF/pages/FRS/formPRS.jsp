@@ -10,16 +10,29 @@
 <link rel="stylesheet"  type="text/css"  href="${pageContext.request.contextPath}/css/form_1.css">
 
 </head>
+<script>
+var checkForm = function(form){
+    var inputs = form.getElementsByTagName('input');
+    for(var i = 0, l = inputs.length; i < l; i++){
+        var input = inputs[i];
+        if(input.type == "checkbox" && input.checked)
+            return true;
+    }
+    alert('Please checked at least 1 subject(s)');
+    return false;
+};
+</script>
 <body>
 
 	<h3>PRS</h3>
  <div class="form-style-10">
-	<form:form action="/SIKuliah2/PRS" method="POST"
+	<form:form onsubmit="return checkForm(this);" action="/SIKuliah2/PRS" method="POST"
 		modelAttribute="prsFormCreate">
 
 		<form:hidden path="id" />
 		<form:hidden path="NPM" value="${mhsNPM}" />
-		<form:hidden path="semesters" value="${semester}" />
+	    <form:hidden path="semester" value="${semester}" />
+	    <form:hidden path="semesters" value="${semesters}" />
 		<table>
 			<tr>
 				<!--                <td>Mahasiswa</td> -->

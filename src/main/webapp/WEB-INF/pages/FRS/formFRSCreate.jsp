@@ -22,7 +22,7 @@ var checkForm = function(form){
     return false;
 };
 </script>
-   <h3>${formTitle}</h3>
+   <h3>CREATE FRS</h3>
  
   <div class="form-style-10">
    <form:form onsubmit="return checkForm(this);" action="/SIKuliah2/FRS" method="POST"
@@ -30,7 +30,8 @@ var checkForm = function(form){
      
        <form:hidden path="id" />
 	   <form:hidden path="NPM" value="${mhsNPM}" />
-	    <form:hidden path="semesters" value="${semester}" />
+	    <form:hidden path="semester" value="${semester}" />
+	    <form:hidden path="semesters" value="${semesters}" />
        <table>
            <tr>
 <!--                <td>Mahasiswa</td> -->

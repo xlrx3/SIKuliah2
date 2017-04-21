@@ -83,10 +83,11 @@ public class FRSController {
 
 
 //		System.out.println(frsInfo.getSemesters());
-		mkjList=this.filterSubjectBySemester(mkjList, frsInfo.getSemesters());
-		
-		Semester smt=frsInfo.getSemesters();
+		Integer smtNum=frsInfo.getSemesters();
+		model.addAttribute("semesters",smtNum);
+		Semester smt=frsInfo.getSemesterFromSemesterNum(smtNum);
 		model.addAttribute("semester",smt);
+		mkjList=this.filterSubjectBySemester(mkjList, smt);
 		
 		for (SubjectMajor mkj : mkjList) {
 //			System.out.println(mkj.getMk().getNama_MK());
@@ -112,7 +113,7 @@ private String formPRS(Model model, FRSForm frsInfo, Student mhs) {
 		Integer NPM = mhs.getId();
 		model.addAttribute("mhsNPM", NPM);
 		
-		Semester smt=frsInfo.getSemesters();
+		Semester smt=frsInfo.getSemester();
 		model.addAttribute("semester",smt);
 
 		List<FRSDetail> listDetail= frsDetailDAO.getAllDetailFromFRSId(frsInfo.getId());
@@ -198,7 +199,8 @@ private String formPRS(Model model, FRSForm frsInfo, Student mhs) {
 			frsf.setNPM(frs.getMhs().getId());
 //			frsf.setId_MK(frs.getMk().getId_MK());
 			frsf.setDosenWali(frs.getDosenWali());
-			frsf.setSemesters(frs.getSemester());
+			frsf.setSemesters(frs.getNumSemester());
+			frsf.setSemester(frs.getSemester());
 
 			mahasiswa = studentDAO.findStudentById(frs.getMhs().getId());
 
@@ -245,7 +247,6 @@ private String formPRS(Model model, FRSForm frsInfo, Student mhs) {
 		FRSForm frsf=new FRSForm();
 		model.addAttribute("frsf",frsf);
 		model.addAttribute("FRSid", id);
-		model.addAttribute("smtList",Semester.values());
 		return "FRS/preCreateFRS";
 	}
 	
@@ -271,4 +272,5 @@ private String formPRS(Model model, FRSForm frsInfo, Student mhs) {
 		
 		return res;
 	}
+
 }
