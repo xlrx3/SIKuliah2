@@ -20,6 +20,9 @@
 			<td><h3><a href="schedules">Jadwal</a></td></h3>
 		</tr>
 		<tr>
+			<td><h3><a href="rooms">Daftar Ruangan</a></td></h3>
+		</tr>		
+		<tr>
 			<td><h3><a href="FRSs">List FRS</a></td></h3>
 		</tr>
 		<tr>
