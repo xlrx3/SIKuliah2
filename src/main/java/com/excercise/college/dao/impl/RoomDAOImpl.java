@@ -54,12 +54,14 @@ public class RoomDAOImpl implements RoomDAO {
 
 	@Override
 	public void saveRoom(RoomForm room) {
+		
 		Integer id = room.getId();
 		Integer floorNum = room.getFloorNum();
 		Integer buildNum = room.getBuildingNum();
 		Integer roomNum=room.getRoomCode();
 		Room rm = null;
 //		Major jur = majorDAO.getMajorById(mahasiswa.getIdJur());
+		
 		if (id != null) {
 		rm = this.getRoomById(id);
 		}

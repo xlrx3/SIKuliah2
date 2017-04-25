@@ -34,8 +34,8 @@ public class RoomController {
 	@RequestMapping(value = "/rooms", method = RequestMethod.GET)
 	public String jurusanList(Model model) {
 		List<Room> list = roomDAO.listAllRoom(); 
-		model.addAttribute("room", list);
-		return "rooms/roomList";
+		model.addAttribute("roomList", list);
+		return "Rooms/roomList";
 	}
 	
 	private String formRoom(Model model, RoomForm rf) {
@@ -48,7 +48,7 @@ public class RoomController {
 			model.addAttribute("formTitle", "Edit Room");
 			model.addAttribute("method","POST");
 		}
-		return "rooms/formRoom";
+		return "Rooms/formRoom";
 	}
 	
 	@RequestMapping(value = "/room", method = RequestMethod.GET)
@@ -65,12 +65,13 @@ public class RoomController {
 	 RoomForm rf = null;
 	 if (id != null) {
 	Room room = roomDAO.getRoomById(id);
-	
+	 
 	 if (room == null) {
 	 return null;
 	 }
 	
 	 rf = new RoomForm();
+	 rf.setId(room.getId());
 	 rf.setBuildingNum(room.getBuildingNum());
 	 rf.setFloorNum(room.getFloorNum());
 	 rf.setName(room.getName());
