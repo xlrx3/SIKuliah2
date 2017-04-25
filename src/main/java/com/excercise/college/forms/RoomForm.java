@@ -1,27 +1,19 @@
-package com.excercise.college.models;
+package com.excercise.college.forms;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "Rooms")
-public class Room {
+public class RoomForm {
 	private Integer id;
 	private Integer roomCode;
 	private Integer floorNum;
 	private Integer buildingNum;
 	private String name;
 	
-	public Room() {
+	public RoomForm() {
 		
 	}
+	
+	
 
-
-	public Room(Integer id, Integer roomCode, Integer floorNum, Integer buildingNum, String name) {
+	public RoomForm(Integer id, Integer roomCode, Integer floorNum, Integer buildingNum, String name) {
 		this.id = id;
 		this.roomCode = roomCode;
 		this.floorNum = floorNum;
@@ -29,9 +21,8 @@ public class Room {
 		this.name = name;
 	}
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", nullable = false)
+
+
 	public Integer getId() {
 		return id;
 	}
@@ -40,7 +31,6 @@ public class Room {
 		this.id = id;
 	}
 
-	@Column(name = "roomCode", nullable = false)
 	public Integer getRoomCode() {
 		return roomCode;
 	}
@@ -49,7 +39,6 @@ public class Room {
 		this.roomCode = roomCode;
 	}
 
-	@Column(name = "floorNum", nullable = false)
 	public Integer getFloorNum() {
 		return floorNum;
 	}
@@ -58,7 +47,6 @@ public class Room {
 		this.floorNum = floorNum;
 	}
 
-	@Column(name = "buildNum", nullable = false)
 	public Integer getBuildingNum() {
 		return buildingNum;
 	}
@@ -67,7 +55,6 @@ public class Room {
 		this.buildingNum = buildingNum;
 	}
 
-	@Column(name = "name", length=100, nullable = false)
 	public String getName() {
 		return name;
 	}

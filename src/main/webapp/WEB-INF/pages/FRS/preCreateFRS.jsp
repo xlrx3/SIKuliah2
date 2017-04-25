@@ -11,7 +11,7 @@
 	<body>
 	
 	<h3>Silahkan Masukan Semester</h3>
-		<form:form onsubmit="return checkForm(this);" action="${pageContext.request.contextPath}/FRS/${FRSid }" method="GET" modelAttribute="frsf">
+		<form:form onsubmit="return checkInput(this);" action="${pageContext.request.contextPath}/FRS/${FRSid }" method="GET" modelAttribute="frsf">
 			<table>
             <tr>
                <td>Semester</td>
@@ -41,6 +41,10 @@
 //     alert('Please checked at least 1 subject(s)');
 //     return false;
 // };
+var checkInput = function(form){
+	
+	
+}
 </script>
 
 </html>

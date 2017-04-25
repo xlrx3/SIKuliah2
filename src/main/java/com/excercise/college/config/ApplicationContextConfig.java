@@ -21,6 +21,7 @@ import com.excercise.college.dao.impl.FRSDAOImpl;
 import com.excercise.college.dao.impl.FRSDetailDAOImpl;
 import com.excercise.college.dao.impl.MajorDAOImpl;
 import com.excercise.college.dao.impl.ReportDAOImpl;
+import com.excercise.college.dao.impl.RoomDAOImpl;
 import com.excercise.college.dao.impl.ScheduleDAOImpl;
 import com.excercise.college.dao.impl.StudentDAOImpl;
 import com.excercise.college.dao.impl.SubjectDAOImpl;
@@ -29,6 +30,7 @@ import com.excercise.college.dao.FRSDAO;
 import com.excercise.college.dao.FRSDetailDAO;
 import com.excercise.college.dao.MajorDAO;
 import com.excercise.college.dao.ReportDAO;
+import com.excercise.college.dao.RoomDAO;
 import com.excercise.college.dao.ScheduleDAO;
 import com.excercise.college.dao.StudentDAO;
 import com.excercise.college.dao.SubjectDAO;
@@ -129,5 +131,10 @@ public class ApplicationContextConfig {
 	@Bean(name = "FRSDetailDAO")
 	public FRSDetailDAO getFRSDetailDAO() {
 		return new FRSDetailDAOImpl();
+	}
+	
+	@Bean(name = "RoomDAO")
+	public RoomDAO getRoomDAO() {
+		return new RoomDAOImpl();
 	}
 }
