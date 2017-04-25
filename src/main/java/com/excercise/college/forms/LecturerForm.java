@@ -8,13 +8,13 @@ public class LecturerForm {
 	private Integer NID;
 	private String nama;
 	private Position jabatan;
-	private Major jurusan;
+	private Integer jurusan;
 	
 	public LecturerForm() {
 		
 	}
 
-	public LecturerForm(Integer id, Integer nID, String nama, Position jabatan, Major jurusan) {
+	public LecturerForm(Integer id, Integer nID, String nama, Position jabatan, Integer jurusan) {
 		this.id = id;
 		NID = nID;
 		this.nama = nama;
@@ -54,11 +54,11 @@ public class LecturerForm {
 		this.jabatan = jabatan;
 	}
 
-	public Major getJurusan() {
+	public Integer getJurusan() {
 		return jurusan;
 	}
 
-	public void setJurusan(Major jurusan) {
+	public void setJurusan(Integer jurusan) {
 		this.jurusan = jurusan;
 	}
 	
